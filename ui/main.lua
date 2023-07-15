@@ -37,7 +37,7 @@ local dragStart
 local startPos
 
 Drag.InputBegan:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType.Name == 'Touch' then
 		local dragEnded 
 
 		dragging = true
@@ -54,7 +54,7 @@ Drag.InputBegan:Connect(function(input)
 end)
 
 oh.Events.Drag = UserInput.InputChanged:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseMovement and dragging then
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch and dragging then
 		local delta = input.Position - dragStart
 		Base.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 	end
