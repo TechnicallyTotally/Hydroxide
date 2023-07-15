@@ -1,6 +1,6 @@
 ## Script
 ```lua
-local owner = "sponguss"
+local owner = "TechnicallyTotally"
 local branch = "revision"
 
 local function webImport(file)
@@ -15,6 +15,8 @@ webImport("ui/main")
 <i>General purpose pen-testing tool for games on the Roblox engine</i>
 
 Please report issues at the "Issues" tab in github, instead of DM'ing me
+
+By Luiz
 
 <p align="center">
     <img src="https://cdn.discordapp.com/attachments/633472429917995038/722143730500501534/Hydroxide_Logo.png"/>
